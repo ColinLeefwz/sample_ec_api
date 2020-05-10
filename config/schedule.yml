@@ -1,0 +1,5 @@
+send_external_email_job:
+  cron: '0 3 * * *'
+  rails_env: production
+  class: SendExternalEmailJob
+  description: A email sending job that runs once a day at 3am UTC

@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  has_many :orders
+
+  validates :name, uniqueness: true
   validates :price, presence: true
   validates :price, numericality: { greater_than: 0, }
   validates :stock, presence: true
